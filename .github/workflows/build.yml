@@ -1,0 +1,40 @@
+---
+name: Build Docker image
+
+on:
+  push:
+    branches:
+      - "**"
+      - "!main"
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repoistory }}
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: ["9"]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Get Docker metadata
+        id: meta
+        uses: docker/metadata-action@v4.5.0
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=${{ matrix.version }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v4.0.0
+        with:
+          context: .
+          push: false
+          build-args: VERSION=${{ matrix.version }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
