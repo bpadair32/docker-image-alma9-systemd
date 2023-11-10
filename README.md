@@ -19,7 +19,7 @@ These tags are available. They are updated once a week or on merges to main.
 - Run the container via Docker:
 
 ```bash
-docker run -itd --privileged ghcr.io/bpadair32/alma-systemd:9
+docker run -itd --privileged ghcr.io/bpadair32/docker-image-alma9-systemd:9
 ```
 
 ## Authors
