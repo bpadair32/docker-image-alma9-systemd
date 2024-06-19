@@ -42,7 +42,7 @@ jobs:
             type=raw,value=${{ matrix.version }}
 
       - name: Build and Push
-        uses: docker/build-push-action@v6.0.0
+        uses: docker/build-push-action@v6.0.1
         with:
           context: .
           push: true
