@@ -31,7 +31,7 @@ jobs:
           docker-ansible
 
       - name: Verify Ansible is working in the built image
-        run: docker exec -tty test-container env TERM=xterm ansible --version
+        run: docker exec --tty test-container env TERM=xterm ansible --version
 
   release:
     name: Release
