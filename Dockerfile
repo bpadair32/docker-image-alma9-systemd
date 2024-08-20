@@ -2,7 +2,7 @@ FROM almalinux:9
 LABEL maintainer="Brad Adair brad@adair.tech"
 ENV container=docker
 
-ENV pip-packages "ansible"
+ENV pip_packages "ansible"
 RUN dnf -y update && dnf clean all
 
 RUN dnf -y install systemd && dnf clean all && \
