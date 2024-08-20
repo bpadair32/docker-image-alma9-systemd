@@ -26,6 +26,7 @@ RUN dnf makecache \
       hostname \
       libyaml \
       python3 \
+      python3-pip
   && dnf clean all
 
 RUN pip3 install $pip_packages
