@@ -56,4 +56,4 @@ jobs:
             file: Dockerfile
             platforms: linux/amd64
             push: true
-            tags: ${{ github.repositor }}:latest
+            tags: ${{ github.repository }}:latest
