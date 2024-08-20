@@ -22,7 +22,9 @@ These tags are available. They are updated once a week or on merges to main.
 docker run -- detach --privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:rw --cgroupns=host ghcr.io/bpadair32/docker-image-alma9-systemd:latest --volume='pwd':/etc/ansible/roles/role_to_test:ro
 ```
 - Run ansible commands inside the container:
+
   a. `docker exec --tty [container_id] env TERM=xterm ansible --version`
+  
   b. `docker exec --tty [container_id] env TERM=xterm ansible-playbook /path-to/playbook.yml --syntax-check` 
 
 ## Authors
