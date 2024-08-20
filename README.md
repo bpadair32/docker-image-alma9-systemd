@@ -1,5 +1,7 @@
 # AlmaLinux Container image for Ansible
 
+[![Build](https://github.com/bpadair32/docker-image-alma9-systemd/actions/workflows/build.yml/badge.svg)](https://github.com/bpadair32/docker-image-alma9-systemd/actions/workflows/build.yml)
+
 Systemd AlmaLinux container images for testing roles with molecule.
 Support versions:
 
@@ -11,7 +13,7 @@ Images are built weekly via Github Actions and can be downloaded from the Github
 
 These tags are available. They are updated once a week or on merges to main.
 
-- 'ghcr.io/bpadair32/alma-systemd:9'
+- 'ghcr.io/bpadair32/alma-systemd:latest'
 
 ## Usage
 
